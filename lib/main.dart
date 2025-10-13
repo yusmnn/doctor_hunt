@@ -1,4 +1,5 @@
 import 'package:doctor_hunt/view/pages/home/home_page.dart';
+import 'package:doctor_hunt/view/pages/live_chat/live_chat_page.dart';
 import 'package:doctor_hunt/view/pages/onboarding/onboarding_page.dart';
 import 'package:doctor_hunt/view/pages/find_doctor/find_doctor_page.dart';
 import 'package:doctor_hunt/view/pages/select_time/select_time_page.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         HomePage.routeName: (context) => const HomePage(),
         FindDoctorPage.routeName: (context) => const FindDoctorPage(),
         SelectTimePage.routeName: (context) => const SelectTimePage(),
+        LiveChatPage.routeName: (context) => const LiveChatPage(),
       },
     );
   }

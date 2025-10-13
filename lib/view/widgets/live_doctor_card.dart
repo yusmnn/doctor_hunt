@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/view/pages/live_chat/live_chat_page.dart';
 import 'package:flutter/material.dart';
 
 class LiveDoctorCard extends StatelessWidget {
@@ -12,9 +13,14 @@ class LiveDoctorCard extends StatelessWidget {
       margin: const EdgeInsets.only(right: 2),
       child: Stack(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: Image.asset(imagePath, fit: BoxFit.cover, width: 140),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, LiveChatPage.routeName);
+            },
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(imagePath, fit: BoxFit.cover, width: 140),
+            ),
           ),
           Positioned(
             top: 6,
