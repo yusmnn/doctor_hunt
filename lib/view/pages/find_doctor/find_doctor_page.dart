@@ -1,4 +1,5 @@
 import 'package:doctor_hunt/utils/my_colors.dart';
+import 'package:doctor_hunt/view/pages/select_time/select_time_page.dart';
 import 'package:doctor_hunt/view/widgets/find_doctor_card.dart';
 import 'package:doctor_hunt/view/widgets/search_find_doctor_widget.dart';
 import 'package:flutter/material.dart';
@@ -131,7 +132,9 @@ class _FindDoctorPageState extends State<FindDoctorPage> {
                   rating: doctor["rating"],
                   storiesCount: doctor["storiesCount"],
                   isFavorite: doctor["isFavorite"],
-                  onBookNow: () {},
+                  onBookNow: () {
+                    Navigator.pushNamed(context, SelectTimePage.routeName);
+                  },
                   onFavoriteToggle: () {
                     setState(() {
                       doctor["isFavorite"] = !doctor["isFavorite"];
