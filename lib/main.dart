@@ -1,5 +1,6 @@
 import 'package:doctor_hunt/view/pages/home/home_page.dart';
 import 'package:doctor_hunt/view/pages/onboarding/onboarding_page.dart';
+import 'package:doctor_hunt/view/pages/find_doctor/find_doctor_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
       ),
       home: OnboardingPage(),
-      routes: {HomePage.routeName: (context) => const HomePage()},
+      routes: {
+        HomePage.routeName: (context) => const HomePage(),
+        FindDoctorPage.routeName: (context) => const FindDoctorPage(),
+      },
     );
   }
 }
